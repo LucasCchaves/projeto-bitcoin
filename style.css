@@ -1,0 +1,88 @@
+   
+
+h2{
+    color: #facc15;
+}
+
+ body {
+        background: #0f172a; /* dark */
+        padding-top: 55px;
+    }
+
+    .card-bitcoin {
+        background: #1e293b;
+        border: 1px solid #facc15;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(250, 204, 21, 0.2);
+    }
+
+    .title-bitcoin {
+        color: #facc15;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .form-control {
+        background: #0f172a;
+        border: 1px solid #334155;
+        color: #fff;
+    }
+
+    .form-control:focus {
+        border-color: #facc15;
+        box-shadow: 0 0 5px #facc15;
+        background: #0f172a;
+        color: #fff;
+    }
+
+    label {
+        color: #e2e8f0;
+    }
+
+    .btn-bitcoin {
+        background: #facc15;
+        border: none;
+        color: #a88d8d;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .btn-bitcoin:hover {
+        background: #facc15;
+        border-color: #facc15;
+        box-shadow: 0 0 5px #facc15; 
+      
+    }
+
+    .collor{
+        background-color: #f0c310;;
+    }
+
+  /* formulario cadastro de usuarios*/
+  .card {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .form-control {
+      border-radius: 10px;
+    }
+
+    .btn-custom {
+      border-radius: 10px;
+      background: #4e73df;
+      color: white;
+      transition: 0.3s;
+    }
+
+    .btn-custom:hover {
+      background: #2e59d9;
+    }
+
+    .title {
+      font-weight: bold;
+      color: #4e73df;
+    }
+
+    
