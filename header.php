@@ -1,3 +1,8 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,8 +40,8 @@
                         <a class="nav-link" href="listar.php">Ver Investimento</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="..classes/Usuario.php">
-                            <?= htmlspecialchars($_SESSION['nome']) ?>
+                        <a class="nav-link" href="perfil.php">
+                           <?= isset($_SESSION['nome']) ? htmlspecialchars($_SESSION['nome']) : '' ?>
                         </a>
                     </li>
                     <li class="nav-item">

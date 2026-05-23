@@ -11,8 +11,8 @@ class CacheDecorator implements CotacaoService {
         $this->arquivo  = $arquivo;
         $this->ttl      = $ttl; // 300 segundos = 5 minutos
     }
-
-    public function getCotacao(): array {
+public function getCotacao(): array {
+  
       if (file_exists($this->arquivo) && time() - filemtime($this->arquivo) < $this->ttl) {
             $conteudo = file_get_contents($this->arquivo);
             return json_decode($conteudo, true);

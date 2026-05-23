@@ -16,6 +16,7 @@ include "header.php";
         <div class="mt-4">
             <a href="cadastrar.php" class="btn btn-warning me-2">Registrar Compra</a>
             <a href="listar.php" class="btn btn-outline-light">Ver Investimentos</a>
+             <a href="limpar-cache.php" class="btn btn-outline-light">atualizar cache</a>
         </div>
 
     </div>
@@ -25,7 +26,7 @@ include "header.php";
 async function pegarCotacaoBTC() {
     try {
         const resposta = await fetch(
-            "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd"
+            "cotacao.php"
         );
 
         if (!resposta.ok) {
@@ -33,15 +34,13 @@ async function pegarCotacaoBTC() {
         }
 
         const dados = await resposta.json();
-        let preco = dados.bitcoin.usd;
+        let preco = dados.preco;
 
         document.getElementById("cotacao_btc").innerText =
             "BTC: $" + preco.toLocaleString("en-US", { minimumFractionDigits: 2 });
 
-        const agora = new Date();
-        const horario = agora.toLocaleTimeString("pt-BR");
-        document.getElementById("ultima_atualizacao").innerText = 
-            "Última atualização: " + horario;
+      document.getElementById("ultima_atualizacao").innerText = 
+    "Última atualização: " + dados.atualizado_em;
 
     } catch (erro) {
         document.getElementById("cotacao_btc").innerText = "Erro ao carregar cotação";
