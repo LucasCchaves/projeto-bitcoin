@@ -15,7 +15,6 @@ class CoinGeckoService implements CotacaoService {
         }
         curl_close($ch);
 
-        var_dump($json);
 
         $data = json_decode($json, true);
         return [
